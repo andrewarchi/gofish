@@ -1,0 +1,11 @@
+# Generated version stubs
+/dl/go*/
+
+# Builds
+/dl/internal/genv/genv
+
+# Releases
+*.tar.gz
+*.zip
+*.pkg
+*.msi

@@ -115,7 +115,7 @@ var mainTmpl = template.Must(template.New("main").Parse(`// Copyright {{.Year}} 
 // File bugs at https://golang.org/issues/new
 package main
 
-import "golang.org/dl/internal/version"
+import "github.com/andrewarchi/gofish/dl/internal/version"
 
 func main() {
 	version.Run("{{.Version}}")
@@ -143,8 +143,8 @@ func golangOrgDlRoot() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	if mod.Path != "golang.org/dl" {
-		return "", fmt.Errorf("working directory must be in module golang.org/dl, but 'go list -m' reports it's currently in module %s", mod.Path)
+	if mod.Path != "github.com/andrewarchi/gofish/dl" {
+		return "", fmt.Errorf("working directory must be in module github.com/andrewarchi/gofish/dl, but 'go list -m' reports it's currently in module %s", mod.Path)
 	}
 	return mod.Dir, nil
 }
